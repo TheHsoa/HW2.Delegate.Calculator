@@ -8,10 +8,10 @@ namespace Calculator
         {
             var num = new[] { 1, 2, 3, 4 };
 
-            var calc = new Calculator(Operation.Add);
+            var calc = new Calculator((x, y) => x + y);
             Console.WriteLine(GetValue(num, calc));
 
-            var multiply = new Calculator(Operation.Multiply);
+            var multiply = new Calculator((x, y) => x * y);
             Console.WriteLine(GetValue(num, multiply));
 
             Console.ReadKey();

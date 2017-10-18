@@ -1,42 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
-    public enum Operation
-    {
-        Add = 0,
-        Subtract,
-        Multiply,
-        Divide,
-    }
+
     public class Calculator
     {
-        private readonly Operation _calculatorType;
+        private Func<int, int, int> _сalculatorType;
 
-        public Calculator(Operation calculatorType)
+        public Calculator(Func<int, int, int> сalculatorType)
         {
-            _calculatorType = calculatorType;
+            _сalculatorType = сalculatorType;
         }
 
         public int Calculate(int x, int y)
         {
-            switch (_calculatorType)
-            {
-                case Operation.Add:
-                    return x + y;
-                case Operation.Subtract:
-                    return x - y;
-                case Operation.Multiply:
-                    return x*y;
-                case Operation.Divide:
-                    return x/y;
-                default:
-                    return 0;
-            }
+            return _сalculatorType(x, y);
         }
+
     }
 }

@@ -8,3 +8,6 @@ C:\Users\Olga\Desktop\1\калькулятор_1\Calculator\Calculator\obj\Debug
 F:\Обучение\Второй курс\Calculator\Calculator\bin\Debug\Calculator.exe.config
 F:\Обучение\Второй курс\Calculator\Calculator\obj\Debug\Calculator.exe
 F:\Обучение\Второй курс\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Домашки\Домашки C#\курс 2\HW2. Delegate\HW2.Delegate.Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Домашки\Домашки C#\курс 2\HW2. Delegate\HW2.Delegate.Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Домашки\Домашки C#\курс 2\HW2. Delegate\HW2.Delegate.Calculator\Calculator\obj\Debug\Calculator.pdb
