@@ -1,32 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Calculator
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var num = new[] { 1, 2, 3, 4 };
+            Console.WriteLine(GetValue(num, (x, y) => x + y));
 
-            var calc = new Calculator((x, y) => x + y);
-            Console.WriteLine(GetValue(num, calc));
-
-            var multiply = new Calculator((x, y) => x * y);
-            Console.WriteLine(GetValue(num, multiply));
+            Console.WriteLine(GetValue(num, (x, y) => x * y));
 
             Console.ReadKey();
         }
 
-        private static int GetValue(int[] num, Calculator calc)
+        private static int GetValue(IEnumerable<int> num, Func<int, int, int> calculate)
         {
-            int result = 0;
-
-            foreach (var n in num)
-            {
-                result += calc.Calculate(n, 1);
-            }
-
-            return result;
+            return num.Sum(n => calculate(n, 1));
         }
     }
 }
